@@ -24,9 +24,9 @@ const Login = () => {
       // store the token in local storage
       localStorage.setItem('accessToken',response.data.access)
       localStorage.setItem('refreshToken',response.data.refresh)
-      console.log('login successful')
+     
       setIsLoggedIn(true)
-      navigate('/')
+      navigate('/dashboard')
 
     }catch(error){
        setError('Invalid credentials')
@@ -62,7 +62,7 @@ const Login = () => {
                     </>
 
                    )  : (
-                    <button className='btn btn-info d-block mx-auto'>Login</button>
+                    "Login"
                    )}
                    </button>
            
